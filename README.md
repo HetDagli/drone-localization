@@ -20,6 +20,7 @@
 
 ## Usage
 
-* The main_stabilize file sends values of throttle and roll to raspberry pi. For this just create a hotspot from your computer, and connect
-raspberry pi to it wirelessly.
+* The testing.py file, calculates value of roll and throttle. These values are to be sent to raspberry pi. For this just create a hotspot from your computer, and connect raspberry pi to it wirelessly.
+* Use sockets to send commands.
 * Receive those commands on raspberry pi and write them to drone via serial or any other way.
+* The file arduinoTest.ino present in ArduinoCode directory can be used to write commands from raspberry pi to arduino made flight controller. As raspberry pi does not have enough hardware PWM output pins, we cannot give 4 channel commands to flight controller directly, hence we provide a way to use an arduino in between raspberry pi and flight controller. This intermediate arduino receives serial commands and converts it into PWM signals.
